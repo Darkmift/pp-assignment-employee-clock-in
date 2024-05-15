@@ -27,7 +27,7 @@ export default class AllExceptionsFilter implements ExceptionFilter {
     const message =
       exception instanceof Error ? exception.message : 'Unexpected error';
     const stack = exception instanceof Error ? exception.stack : undefined;
-    this.logger.error(message, stack, request.url);
+    // this.logger.error(message, stack, request.url);
 
     response.status(status).json({
       statusCode: status,
